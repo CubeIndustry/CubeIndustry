@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pai Sho</title>
+    <link rel="icon" href="icon.png" type="image/png"> 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; 
+            color: #ffffff; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1f1f1f; 
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header img {
+            width: 50px; 
+            vertical-align: middle;
+            margin-right: 10px; 
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s, transform 0.2s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #e74c3c; 
+            transform: scale(1.05);
+        }
+        footer {
+            background: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        #Pai-Sho {
+            padding: 20px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .download-button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #e74c3c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="icon.png" alt="Website Icon"> 
+    <h1>Pai Sho</h1>
+    <nav>
+        <a href="Startseite.html">Startseite</a>
+        <a href="Neuheiten.html">Neuheiten</a>
+        <a href="Bestseller.html">Bestseller</a>
+        <a href="Kontakt.html">Kontakt</a>
+    </nav>
+</header>
+<div id="Pai-Sho">
+    <form id="form" action="https://formsubmit.co/CubeBuilder@web.de" method="POST" onsubmit="return handleSubmit(event)">
+        <input type="text" name="name" placeholder="Dein Name" required id="name">
+        <br>
+        <input type="email" name="email" placeholder="Deine E-Mail" required id="email">
+        <br>
+        <button type="submit">Absenden</button>
+    </form>
+    <input id="produktcode" class="hidden" placeholder="Produktcode" />
+    <button id="submitcode" class="hidden" onclick="checkCode()">Überprüfen</button>
+    <div id="download-buttons" class="hidden">
+        <button class="download-button" onclick="downloadFile1()">Für Windows</button>
+        <button class="download-button" onclick="downloadFile2()">Für Mobilgeräte</button>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2023 CubeIndustry. Alle Rechte vorbehalten.</p>
+</footer>
+<script>
+    function saveFormSubmissionStatus() {
+        localStorage.setItem("formSubmitted", "true");
+    }
+
+    function loadFormSubmissionStatus() {
+        const isSubmitted = localStorage.getItem("formSubmitted");
+        if (isSubmitted) {
+            document.getElementById("form").classList.add("hidden");
+            document.getElementById("produktcode").classList.remove("hidden");
+            document.getElementById("submitcode").classList.remove("hidden");
+        }
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault(); 
+        saveFormSubmissionStatus(); 
+        document.getElementById("form").submit(); 
+        return false; 
+    }
+
+    function checkCode() {
+        const code = document.getElementById("produktcode").value;
+        if (code === "T9#vL8@kW3!xQ2$z") {
+            document.getElementById("download-buttons").classList.remove("hidden");
+            document.getElementById('produktcode').classList.add("hidden");
+            document.getElementById('submitcode').classList.add("hidden");
+        } else {
+            alert("Der eingegebene Code ist inkorrekt!");
+        }
+    }
+
+    function downloadFile1() {
+        const link = document.createElement('a');
+        link.href = 'pai-sho.exe'; 
+        link.download = 'pai-sho'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function downloadFile2() {
+        const link = document.createElement('a');
+        link.href = 'pai-sho.apk'; 
+        link.download = 'pai-sho'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    window.onload = () => {
+        loadFormSubmissionStatus();
+    };
+</script>
+</body>
+</html>
