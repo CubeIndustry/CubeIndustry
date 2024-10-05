@@ -8,14 +8,14 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #121212; /* Heller Hintergrund für die gesamte Seite */
-            color: #fff; /* Dunklerer Text für besseren Kontrast */
+            background-color: #fff; /* Heller Hintergrund für die gesamte Seite */
+            color: #333; /* Dunklerer Text für besseren Kontrast */
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background: #1f1f1f; /* Helleres, freundlicheres Grün */
+            background: #f4f4f9; /* Helleres, freundlicheres Grün */
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -25,18 +25,27 @@
             vertical-align: middle;
             margin-right: 10px; 
         }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.05); 
+        }
         nav {
             margin: 20px 0;
         }
         nav a {
-            color: #ffffff;
+            color: #333;
             text-decoration: none;
             padding: 10px 15px;
             transition: background 0.3s, transform 0.2s;
             border-radius: 5px;
         }
         nav a:hover {
-            background: #66BB6A; /* Hellerer Hover-Effekt */
+            background: #fff; /* Hellerer Hover-Effekt */
             transform: scale(1.05);
         }
         .container {
@@ -45,7 +54,7 @@
             margin: 0 auto;
         }
         .kontakt-info {
-            background-color: #ffffff; /* Heller, freundlicher Hintergrund */
+            background-color: #f4f4f9; /* Heller, freundlicher Hintergrund */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -53,16 +62,16 @@
         }
         .kontakt-info h2 {
             margin-bottom: 20px;
-            color: #000; /* Passende Akzentfarbe für Überschrift */
+            color: #333; /* Passende Akzentfarbe für Überschrift */
         }
         .kontakt-info p {
             margin: 10px 0;
             text-decoration: none; 
-            color: #555; /* Leicht abgedunkelte Textfarbe */
+            color: #333; /* Leicht abgedunkelte Textfarbe */
         }
         footer {
-            background: #1f1f1f;
-            color: #ffffff;
+            background: #f4f4f9;
+            color: #333;
             text-align: center;
             padding: 15px 0;
             position: relative;
