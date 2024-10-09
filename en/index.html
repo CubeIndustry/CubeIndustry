@@ -143,7 +143,7 @@
             if (checkbox.checked) {
                 // Speichern, dass das Captcha erfolgreich abgeschlossen wurde
                 localStorage.setItem("captchaPassed", "true");
-                window.location.href = "/CubeIndustry/en/Home"; 
+                window.location.href = "/CubeIndustry/en/Startseite.html"; 
             } else {
                 alert("Please confirm that you are not a robot.");
             }
@@ -152,7 +152,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             // Überprüfen, ob Captcha bereits bestanden wurde
             if (localStorage.getItem("captchaPassed") === "true") {
-                window.location.href = "/CubeIndustry/en/Home";
+                window.location.href = "/CubeIndustry/en/Startseite.html";
             }
         });
     </script>
