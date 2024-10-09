@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News</title>
+    <link rel="icon" href="/CubeIndustry/icon.png" type="image/png"> 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff; 
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f9; 
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header img {
+            width: 50px; 
+            vertical-align: middle;
+            margin-right: 10px; 
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.05); 
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s, transform 0.2s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #fff; 
+            transform: scale(1.05);
+        }
+        footer {
+            background: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .hero {
+            background: url('/CubeIndustry/hero.png') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+        .hero h2 {
+            color: #333;
+            background: rgba(244, 244, 249, 0.8); 
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.3rem; 
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="/CubeIndustry/icon.png" alt="Website Icon"> 
+    <h1>News</h1>
+    <nav>
+        <a href="/CubeIndustry/en/Startseite">Home</a>
+        <a href="#" onclick="reload()">News</a>
+        <a href="/CubeIndustry/en/Bestseller">Bestseller</a>
+        <a href="/CubeIndustry/en/Kontakt">Contact</a>
+    </nav>
+</header>
+    <div class="hero">
+        <h2>Computer games now also from CubeIndustry</h2>
+    </div>
+<footer>
+    <p>&copy; 2023 CubeIndustry. All rights reserved.</p>
+</footer>
+<script>
+    function reload() {
+        window.location.reload();
+    }
+</script>
+</body>
+</html>
