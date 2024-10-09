@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop</title>
+    <link rel="icon" href="/CubeIndustry/icon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f9;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header img {
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.05); 
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s, transform 0.2s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .card {
+            background: #f4f4f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            text-align: center;
+
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            background: #f4f4f9;
+        }
+        h2 {
+            color: #333;
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 0.9rem;
+            }
+            p {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="/CubeIndustry/icon.png" alt="Website Icon">
+    <h1>CubeIndustry Shop</h1>
+    <nav>
+        <a href="/CubeIndustry/en/Home">Home</a>
+        <a href="/CubeIndustry/en/News">News</a>
+        <a href="/CubeIndustry/en/Bestseller">Bestseller</a>
+        <a href="/CubeIndustry/en/Contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="card" onclick="gamelink1()">
+        <img src="/CubeIndustry/Pai-Sho.png" alt="Spiel 1">
+        <h2>Pai Sho</h2>
+        <p>A board game from the universe of Avatar (The Last Airbender).</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 CubeIndustry. All rights reserved.</p>
+</footer>
+    <script>
+        function gamelink1() {
+            window.location.href="/CubeIndustry/en/Pai-Sho"
+        }
+    </script>
+</body>
+</html>
