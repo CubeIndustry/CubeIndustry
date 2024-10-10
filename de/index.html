@@ -143,7 +143,7 @@
             if (checkbox.checked) {
                 // Speichern, dass das Captcha erfolgreich abgeschlossen wurde
                 localStorage.setItem("captchaPassed", "true");
-                window.location.href = "/CubeIndustry/de/Startseite.html"; 
+                window.location.href = "/CubeIndustry/de/Startseite"; 
             } else {
                 alert("Bitte bestätigen, dass Sie kein Roboter sind.");
             }
@@ -152,7 +152,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             // Überprüfen, ob Captcha bereits bestanden wurde
             if (localStorage.getItem("captchaPassed") === "true") {
-                window.location.href = "/CubeIndustry/de/Startseite.html";
+                window.location.href = "/CubeIndustry/de/Startseite";
             }
         });
     </script>
@@ -170,12 +170,12 @@
         </form>
         <div class="info">
             Dieser Schritt schützt Ihre Daten vor Missbrauch. <br>
-            Weitere Informationen finden Sie in unserer <a href="/CubeIndustry/de/Datenschutzerklärung.html">Datenschutzerklärung</a>.
+            Weitere Informationen finden Sie in unserer <a href="/CubeIndustry/de/Datenschutzerklärung">Datenschutzerklärung</a>.
         </div>
     </div>
     <br>
     <div id="cookie-banner" style="display: none;">
-        <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. <a href="/CubeIndustry/de/Datenschutzerklärung.html">Mehr erfahren</a>.</p>
+        <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. <a href="/CubeIndustry/de/Datenschutzerklärung">Mehr erfahren</a>.</p>
         <button id="accept-cookies">Akzeptieren</button>
         <button id="reject-cookies">Ablehnen</button>
     </div>
